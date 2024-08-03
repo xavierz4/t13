@@ -1,6 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
+// next.config.mjs
+import withPWA from 'next-pwa';
 
-export default nextConfig;
+export default withPWA({
+  pwa: {
+    dest: 'public',
+  },
+  reactStrictMode: true,
+});
